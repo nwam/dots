@@ -14,6 +14,11 @@ nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
 
+"Better movement
+noremap l h
+noremap ; l
+noremap h ; 
+
 "set the color scheme
 colorscheme elflord
 sy on
@@ -36,7 +41,7 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
-"enable mouse in console
+"enable mouse
 set mouse=a
 
 "enable wildmenu (lists tab options)

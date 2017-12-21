@@ -125,3 +125,6 @@ export PATH="$PATH:$HOME/scripts:$HOME/Documents/mkds"
 # Custom prompt
 
 export PS1="\[\e[35m\]\u\[\e[m\]\[\e[1;30m\]@\[\e[m\]\[\e[92m\]\h\[\e[m\]\[\e[1;30m\]:\[\e[m\]\[\e[94m\]\W\[\e[m\]\[\e[36m\]\\$\[\e[m\] "
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
