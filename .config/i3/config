@@ -178,7 +178,7 @@ bindsym $mod+r mode "resize"
 #    status_command i3status
 #}
 
-exec_always --no-startup-id killall polybar; polybar example
+exec_always --no-startup-id killall polybar; polybar campfire
 
 # no titlebar
 for_window [class="^.*"] border pixel 3
