@@ -25,7 +25,8 @@ shopt -s checkwinsize
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
-#shopt -s globstar
+shopt -s globstar
+shopt -s extglob
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -116,17 +117,16 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Enable ** to search recursively
-shopt -s globstar
-
 # Add scripts to PATH
-export PATH="$PATH:$HOME/scripts:$HOME/Documents/mkds"
+export PATH="$HOME/.dynamic-colors/bin:$PATH:$HOME/scripts:$HOME/Documents/mkds"
 
 # Custom prompt
-
 export PS1="\[\e[35m\]\u\[\e[m\]\[\e[1;30m\]@\[\e[m\]\[\e[92m\]\h\[\e[m\]\[\e[1;30m\]:\[\e[m\]\[\e[94m\]\W\[\e[m\]\[\e[36m\]\\$\[\e[m\] "
 
 # Ruby is not allowed
 #export PATH="$HOME/.rbenv/bin:$PATH"
 #eval "$(rbenv init -)"
 #export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+
+# Autocomplete for dynamic-colors
+source $HOME/.dynamic-colors/completions/dynamic-colors.bash

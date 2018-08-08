@@ -1,4 +1,3 @@
-"MAPPINGS
 "remapping of escaping insert mode
 inoremap jk <esc>
 inoremap kj <esc>
@@ -19,27 +18,47 @@ noremap l h
 noremap ; l
 noremap h ; 
 
-"set the color scheme
-colorscheme elflord
+"split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Vundle
+set nocompatible              " required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+Plugin 'leafgarland/typescript-vim'
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" add all your plugins here (note older versions of Vundle
+" used Bundle instead of Plugin)
+
+" ...
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" Syntax hilighting
 sy on
 
-"set line numbers
+" line numbers
 set number
 
 "very important
 set autoindent
 
-"for color scheme
-filetype on
-filetype plugin on
 syntax enable
 set grepprg=grep\ -nH\ $*
-
-"tab as 4 spaces
-set expandtab
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
 
 "enable mouse
 set mouse=a
@@ -58,19 +77,16 @@ set clipboard=unnamedplus
 "set fdm=indent
 
 " configure expanding of tabs for various file types
-au BufRead,BufNewFile *.py set expandtab
-au BufRead,BufNewFile *.c set noexpandtab
-au BufRead,BufNewFile *.h set noexpandtab
-au BufRead,BufNewFile Makefile* set noexpandtab
+"au BufRead,BufNewFile *.py set expandtab
+"au BufRead,BufNewFile *.c set noexpandtab
+"au BufRead,BufNewFile *.h set noexpandtab
+"au BufRead,BufNewFile Makefile* set noexpandtab
 
-" --------------------------------------------------------------------------------
-" configure editor with tabs and nice stuff...
-" --------------------------------------------------------------------------------
+" tabs
 set expandtab           " enter spaces when tab is pressed
-"set textwidth=120       " break lines when line length increases
-set tabstop=4           " use 4 spaces to represent tab
-set softtabstop=4
-set shiftwidth=4        " number of spaces to use for auto indent
+set tabstop=2           " use 2 spaces to represent tab
+set softtabstop=2
+set shiftwidth=2        " number of spaces to use for auto indent
 set autoindent          " copy indent from current line when starting a new line
 
 " make backspaces more powerfull
@@ -79,9 +95,4 @@ set backspace=indent,eol,start
 set ruler               " show line and column number
 syntax on               " syntax highlighting
 set showcmd             " show (partial) command in status line
-
-"Run filetype specific options
-au Filetype html set tabstop=2
-au Filetype html set shiftwidth=2
-au Filetype html set softtabstop=2
 
