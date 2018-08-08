@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+cp -f .bash_aliases .bashrc .git .vimrc .Xdefaults $HOME
+cp -rf polybar i3 $HOME/.config
