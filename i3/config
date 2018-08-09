@@ -34,6 +34,8 @@ bindsym $mod+Return exec urxvt #i3-sensible-terminal
 bindsym $mod+i exec env GTK_THEME=Adwaita:light firefox 
 bindsym $mod+b exec thunar
 
+# diable ctrl-q for firefox
+bindsym Ctrl+q exec $HOME/scripts/noctrlqff
 
 # kill focused window
 bindsym $mod+Shift+q kill
