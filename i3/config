@@ -248,4 +248,4 @@ exec --no-startup-id nitrogen --set-zoom-fill --no-recurse $HOME/Pictures/wallpa
 exec --no-startup-id compton -f -o "0.5" -m "1" -e "1" -D "3" -c -C -r "26" -l "-39" -t "-25" --shadow-red "0.05" --shadow-green "0.05" --shadow-blue "0.05" -b
 
 # screensaver
-exec --no-startup-id xscreensaver
+exec --no-startup-id xscreensaver -no-splash

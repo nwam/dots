@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
 cp -rf scripts .bash_aliases .bashrc .git .vimrc .Xdefaults $HOME
-cp -rf polybar i3 $HOME/.config
+cp -rf polybar i3 dunst $HOME/.config
+sudo mkdir /etc/dunst
+sudo ln $HOME/dunst/dunstrc /etc/dunst

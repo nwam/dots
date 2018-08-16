@@ -23,6 +23,7 @@ secondary = #e60053
 alert = #bd2c40
 
 [bar/campfire]
+monitor = HDMI-1
 
 modules-left = i3
 modules-center =
@@ -152,9 +153,9 @@ label-unfocused-padding = ${self.padding}
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
-label-visible-background = ${self.label-focused-background}
+label-visible-background = ${colors.accent2}
 label-visible-underline = ${self.label-focused-underline}
-label-visible-padding = ${module/bspwm.label-occupied-padding}
+label-visible-padding = ${self.padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%

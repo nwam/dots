@@ -27,7 +27,7 @@ alias dim='light -S 1'
 alias reset_wifi='nmcli radio wifi off && sleep 5 && nmcli radio wifi on'
 
 # hardware
-alias monitor_config_desktop='xrandr --output HDMI2 --auto --rotate normal --pos 0x0 --output DP1 --auto --rotate normal --left-of HDMI2 --output eDP1 --auto --rotate normal --left-of HDMI2 '
+alias monitor_config_desktop='xrandr --output HDMI-1 --auto --rotate normal --pos 0x0 --output HDMI-2 --auto --rotate normal --left-of HDMI-1 --output eDP-1 --auto --rotate normal --same-as HDMI-1'
 alias mirror_display='xrandr --output HDMI-2 --auto --same-as eDP-1'
 alias disable_middle_click='xmodmap -e "pointer = 1 25 3 4 5 6 7 8 9"'
 alias enable_middle_click='xmodmap -e "pointer = 1 2 3 4 5 6 7 8 9"'
