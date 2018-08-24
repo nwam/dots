@@ -16,13 +16,19 @@ nnoremap <right> <nop>
 "Better movement
 noremap l h
 noremap ; l
-noremap h ; 
+noremap h ;
 
 "split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+"arrow key insert fix
+imap <ESC>oA <ESC>ki
+imap <ESC>oB <ESC>ji
+imap <ESC>oC <ESC>li
+imap <ESC>oD <ESC>hi
 
 " Vundle
 set nocompatible              " required

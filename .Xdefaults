@@ -50,7 +50,7 @@ xscreensaver.dateFormat:    %I:%M%P %a %b %d, %Y
 *.color11:      #eedd99
 
 ! blue
-*.color4:       #e0ba69
+*.color4:       #f3ab57
 *.color12:      #c9b957
 
 ! magenta
