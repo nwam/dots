@@ -1,0 +1,12 @@
+#!/bin/sh
+killall polybar
+if [ "$#" -gt 0 ]; then
+  for m in "$@"
+  do
+    MONITOR=$m polybar polybar &
+  done
+else
+  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+    MONITOR=$m polybar polybar &
+  done
+fi

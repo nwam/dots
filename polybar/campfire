@@ -22,7 +22,7 @@ accent4 = #8C4646
 secondary = #e60053
 alert = #bd2c40
 
-[bar/campfire]
+[bar/polybar]
 monitor = ${env:MONITOR:}
 
 modules-left = i3

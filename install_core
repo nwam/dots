@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+cp -alf scripts .bash_aliases .bashrc .vimrc $HOME
+#cp -alf polybar i3 vis $HOME/.config
+cp -alf dunst vis/colors $HOME/.config
+echo "export PATH=\"`pwd`/theme:\$PATH\"" >> $HOME/.bashrc
+
+sudo mkdir /etc/dunst
+sudo ln $HOME/dunst/dunstrc /etc/dunst

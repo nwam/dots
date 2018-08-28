@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+
+import os
+import logging
+import argparse
+import subprocess
+
+HOME = os.path.expanduser('~')
+CONFIG = os.path.join(HOME, '.config')
+DOTS = dir_path = os.path.dirname(os.path.realpath(__file__))
+
+I3_CONFIG = os.path.join(CONFIG, 'i3/config')
+POLYBAR_CONFIG = os.path.join(CONFIG, 'polybar/config')
+XDEFAULTS_CONFIG = os.path.join(HOME, '.Xdefaults')
+VIS_CONFIG = os.path.join(CONFIG, 'vis/config')
+
+def link(src, dst, name):
+    if os.path.isfile(dst):
+        os.remove(dst)
+
+    if os.path.isfile(src):
+        os.link(src, dst)
+    else:
+        logging.warning('{} config not found at {}.'.format(name, src))
+
+if __name__ == '__main__':
+
+    logging.basicConfig(level=logging.INFO)
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('theme',
+            type = str,
+            help = 'The name of the theme to use. The must be a corresponging \
+                    file with the theme name in all style directories.')
+    args = parser.parse_args()
+
+    theme = args.theme
+
+    i3 = os.path.join(DOTS, 'i3', theme)
+    polybar = os.path.join(DOTS, 'polybar', theme)
+    xdefaults = os.path.join(DOTS, 'Xdefaults', theme)
+    vis = os.path.join(DOTS, 'vis', theme)
+
+    link(i3, I3_CONFIG, 'i3')
+    link(polybar, POLYBAR_CONFIG, 'polybar')
+    link(xdefaults, XDEFAULTS_CONFIG, 'Xdefaults')
+    link(vis, VIS_CONFIG, 'vis')
+
+    subprocess.run(['i3-msg', 'restart'])

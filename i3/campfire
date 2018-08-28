@@ -227,10 +227,6 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
-# taskbar
-exec_always --no-startup-id killall polybar
-exec_always --no-startup-id ~/scripts/polybar_launch
-
 # no titlebar
 for_window [class="^.*"] border pixel 3
 
@@ -245,12 +241,18 @@ client.unfocused        #333333 #222222 #888888 #292d2e   #08231d
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
-# background
-exec --no-startup-id mirror_display
-exec --no-startup-id nitrogen --set-zoom-fill --no-recurse $HOME/Pictures/wallpaper/_0/cassie_bonn.jpg
-
 # compositor
-exec --no-startup-id compton -f -o "0.5" -m "1" -e "1" -D "3" -c -C -r "26" -l "-39" -t "-25" --shadow-red "0.05" --shadow-green "0.05" --shadow-blue "0.05" -b
+#exec_always --no-startup-id killall compton; compton -f -o "0.5" -m "1" -e "1" -D "3" -c -C -r "26" -l "-39" -t "-25" --shadow-red "0.05" --shadow-green "0.05" --shadow-blue "0.05" -b
+
+# background
+exec_always --no-startup-id nitrogen --set-zoom-fill --no-recurse $HOME/Pictures/wallpaper/_0/cassie_bonn.jpg --head=0
+exec_always --no-startup-id nitrogen --set-zoom-fill --no-recurse $HOME/Pictures/wallpaper/_0/cassie_bonn.jpg --head=1
+exec_always --no-startup-id nitrogen --set-zoom-fill --no-recurse $HOME/Pictures/wallpaper/_0/cassie_bonn.jpg --head=2
 
 # screensaver
 exec --no-startup-id xscreensaver -no-splash
+
+# taskbar
+exec_always --no-startup-id killall polybar
+exec_always --no-startup-id ~/scripts/polybar_launch
+

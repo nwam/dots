@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-cp -alf scripts .bash_aliases .bashrc .git .vimrc .Xdefaults $HOME
-cp -alf polybar i3 dunst vis $HOME/.config
-
-sudo mkdir /etc/dunst
-sudo ln $HOME/dunst/dunstrc /etc/dunst
