@@ -22,6 +22,7 @@ XDEFAULTS_THEMES = os.path.join(DOTS, 'Xdefaults')
 VIS_THEMES = os.path.join(DOTS, 'vis')
 
 I3_TEMPLATE = os.path.join(I3_THEMES, TEMPLATE)
+POLYBAR_TEMPLATE = os.path.join(POLYBAR_THEMES, TEMPLATE)
 XDEFAULTS_TEMPLATE = os.path.join(XDEFAULTS_THEMES, TEMPLATE)
 VIS_TEMPLATE = os.path.join(VIS_THEMES, TEMPLATE)
 
@@ -81,7 +82,8 @@ if __name__ == '__main__':
     vis = os.path.join(VIS_THEMES, theme)
 
     install_templated_theme(i3, I3_TEMPLATE, I3_CONFIG, 'i3')
-    link(polybar, POLYBAR_CONFIG, 'polybar')
+    install_templated_theme(
+                polybar, POLYBAR_TEMPLATE, POLYBAR_CONFIG, 'polybar')
     install_templated_theme(
                 xdefaults, XDEFAULTS_TEMPLATE, XDEFAULTS_CONFIG, 'Xdefaults')
     install_templated_theme(vis, VIS_TEMPLATE, VIS_CONFIG, 'vis')

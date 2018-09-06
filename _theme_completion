@@ -1,0 +1,17 @@
+_themes()
+{
+    local cur prev opts themedir i3dir themes
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    opts="--help --verbose --version"
+    themedir=`which theme | xargs dirname`
+    i3dir="$themedir/i3"
+    themes=`ls $i3dir`
+
+    if [[ ${prev} == theme ]] ; then
+        COMPREPLY=( $(compgen -W "${themes}" -- ${cur}) )
+        return 0
+    fi
+}
+complete -F _themes -X template theme

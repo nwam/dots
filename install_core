@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 
 cp -alf scripts .bash_aliases .bashrc .vimrc $HOME
-#cp -alf polybar i3 vis $HOME/.config
 cp -alf dunst vis/colors $HOME/.config
 
-# Install `theme` command
-echo "export PATH=\"`pwd`/theme:\$PATH\"" >> $HOME/.bashrc
+# Install `theme` command and autocomplete
+ln -s theme $HOME/scripts
+sudo ln _theme_completion /etc/bash_completion.d/theme
 
+# Install dunst config
 sudo mkdir /etc/dunst
 sudo ln $HOME/dunst/dunstrc /etc/dunst
+
+. $HOME/.bashrc
