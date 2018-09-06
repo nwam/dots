@@ -130,3 +130,5 @@ export PS1="\[\e[35m\]\u\[\e[m\]\[\e[1;30m\]@\[\e[m\]\[\e[92m\]\h\[\e[m\]\[\e[1;
 
 # Autocomplete for dynamic-colors
 source $HOME/.dynamic-colors/completions/dynamic-colors.bash
+
+export THEMES_DIR="/home/nwam/Projects/dots"

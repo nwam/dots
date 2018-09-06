@@ -1,4 +1,20 @@
 #!/usr/bin/env python3
+"""
+Theme switcher for i3wm.
+
+This script changes i3, polybar, Xdefaults, and vis config files to update
+themes. The environment variable THEMES_DIR must be exported and point to
+a directory containing subdirectories called 'i3', 'polybar', 'Xdefaults' and
+'vis'.
+
+Each of these dirs should contain config files for their respective
+programs. The config files for a theme should be named after the theme. For
+example, for the theme 'forest', the files '$THEMES_DIR/i3/forest',
+'$THEMES_DIR/polybar/forest', ... exist.
+
+The config dirs should also each include a 'template' file which has shared
+config settings accross all themes.
+"""
 
 import os
 import shutil
@@ -8,7 +24,7 @@ import subprocess
 
 HOME = os.path.expanduser('~')
 CONFIG = os.path.join(HOME, '.config')
-DOTS = dir_path = os.path.dirname(os.path.realpath(__file__))
+DOTS = os.environ["THEMES_DIR"]
 TEMPLATE = 'template'
 
 I3_CONFIG = os.path.join(CONFIG, 'i3/config')

@@ -4,7 +4,9 @@ cp -alf scripts .bash_aliases .bashrc .vimrc $HOME
 cp -alf dunst vis/colors $HOME/.config
 
 # Install `theme` command and autocomplete
-ln -s theme $HOME/scripts
+THIS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+echo "export THEMES_DIR=$THIS_DIR" >> $HOME/.bashrc
+ln theme $HOME/scripts
 sudo ln _theme_completion /etc/bash_completion.d/theme
 
 # Install dunst config
