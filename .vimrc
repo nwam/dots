@@ -72,6 +72,8 @@ set hlsearch
 "set copy/paste to global clipboard
 set clipboard=unnamedplus
 
+set encoding=utf-8
+
 "enable indent folding
 "set fdm=indent
 

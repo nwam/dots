@@ -1,5 +1,5 @@
 MAIN_DISPLAY="HDMI-1"
 SECONDARY_DISPLAY="HDMI-2"
 INTERNAL_DISPLAY="eDP-1"
-xrandr --output $MAIN_DISPLAY --auto --rotate normal --pos 0x0 --output $SECONDARY_DISPLAY --auto --rotate normal --left-of $MAIN_DISPLAY --output $INTERNAL_DISPLAY --auto --rotate normal --same-as $MAIN_DISPLAY
+xrandr --output $MAIN_DISPLAY --auto --rotate normal --pos 0x0 --output $SECONDARY_DISPLAY --auto --rotate normal --left-of $MAIN_DISPLAY --output $INTERNAL_DISPLAY --auto --rotate normal --same-as $SECONDARY_DISPLAY
 polybar_launch $MAIN_DISPLAY
