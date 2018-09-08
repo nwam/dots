@@ -6,39 +6,39 @@ URxvt.boldfont:xft:Monospace-Bold:size=10
 URxvt.scrollBar: false
 
 ! special
-*.foreground:   #ffffff
-*.background:   #1e1e1e
-*.cursorColor:  #ffffff
+*.foreground:   #c5c8c6
+*.background:   #1d1f21
+*.cursorColor:  #c5c8c6
 
 ! black
-*.color0:       #5a7260
-*.color8:       #8da691
+*.color0:       #282a2e
+*.color8:       #373b41
 
 ! red
-*.color1:       #8f423c
-*.color9:       #eeaa88
+*.color1:       #ffc387
+*.color9:       #ffdbaf
 
 ! green
-*.color2:       #bbbb88
-*.color10:      #ccc68d
+*.color2:       #8cff98
+*.color10:      #b2ffbb
 
 ! yellow
-*.color3:       #f9d25b
-*.color11:      #eedd99
+*.color3:       #f3ff85
+*.color11:      #faffb1
 
 ! blue
-*.color4:       #e0ba69
-*.color12:      #c9b957
+*.color4:       #79d9c4
+*.color12:      #9ed9cd
 
 ! magenta
-*.color5:       #709289
-*.color13:      #ffcbab
+*.color5:       #ff8282
+*.color13:      #ff9999
 
 ! cyan
-*.color6:       #d13516
-*.color14:      #c25431
+*.color6:       #b4ff82
+*.color14:      #d4ffb2
 
 ! white
-*.color7:       #efe2e0
-*.color15:      #f9f1ed
+*.color7:       #707880
+*.color15:      #c5c8c6
 

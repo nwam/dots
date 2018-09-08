@@ -18,5 +18,5 @@ exec_always --no-startup-id nitrogen --set-zoom-fill --no-recurse $HOME/Pictures
 exec_always --no-startup-id nitrogen --set-zoom-fill --no-recurse $HOME/Pictures/wallpaper/2017_Germany/trees.png --head=2
 
 # compositor
-exec_always compton
+exec_always --no-startup-id compton
 
