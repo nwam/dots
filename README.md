@@ -12,6 +12,16 @@ My collection of config files and scripts including:
 ## Install
 Run `./install_core` to create hard links of most of the config files and scripts to their default locations (mostly in `$HOME`). You will need to update the value of `$THEMES_DIR` in your `.bashrc` if you move this repo. No theme will be used by default.
 
+### Dependencies
+This dependency list may not be full.
+ - [i3-gaps](https://github.com/Airblader/i3)
+ - [polybar](https://github.com/jaagr/polybar)
+ - [urxvt](https://wiki.archlinux.org/index.php/rxvt-unicode)
+ - [vis](https://github.com/dpayne/cli-visualizer) (optional)
+ - [compton](https://github.com/chjj/compton)
+ - [dunst](https://github.com/dunst-project/dunst) (optional)
+ - [dynamic-colors](https://github.com/sos4nt/dynamic-colors)
+
 ### Manual Install
 For manual install, see the `./install_core` file and run commands of parts which you wish to install.
 

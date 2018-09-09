@@ -21,6 +21,7 @@ import shutil
 import logging
 import argparse
 import subprocess
+from util.urxvt_update import update_urxvt_colors
 
 HOME = os.path.expanduser('~')
 CONFIG = os.path.join(HOME, '.config')
@@ -103,5 +104,7 @@ if __name__ == '__main__':
     install_templated_theme(
                 xdefaults, XDEFAULTS_TEMPLATE, XDEFAULTS_CONFIG, 'Xdefaults')
     install_templated_theme(vis, VIS_TEMPLATE, VIS_CONFIG, 'vis')
+
+    update_urxvt_colors()
 
     subprocess.run(['i3-msg', 'restart'])
