@@ -1,3 +1,4 @@
+
 ;=====================================================
 ;
 ;   To learn more about how to configure Polybar
@@ -23,12 +24,24 @@ accent4 = #FFB49A
 secondary = #e60053
 alert = #bd2c40
 
+ramp0 = #ff9999
+ramp1 = #ffdbaf
+ramp2 = #faffb1
+ramp3 = #d4ffb2
+ramp4 = #b2ffbb
+ramp5 = #9ed9c8
+
+transparent = #00000000
+
+[globals]
+margin = 1
+
 [bar/polybar]
 
 monitor = ${env:MONITOR:}
 modules-left = i3
 modules-center =
-modules-right = volume date
+modules-right = battery volume date
 ;modules-right = cpu memory volume battery date
 
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -133,11 +146,11 @@ label-empty-padding = 2
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
-format-margin = 1
+format-margin = ${globals.margin}
 index-sort = true
 wrapping-scroll = false
 padding = 9
-margin = 1
+margin = ${globals.margin}
 
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
@@ -327,38 +340,35 @@ battery = BAT1
 adapter = AC
 full-at = 98
 
-label-charging = %percentage%% 
-label-discharging = %percentage%%
-label-full = %percentage%% 
+label-charging =
+label-discharging =
+label-full =
 
 format-charging = <ramp-capacity> <label-charging>
-format-charging-underline = ${colors.primary}
+format-charging-underline = ${colors.transparent}
+format-charging-margin = ${globals.margin}
 
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-underline = ${colors.accent3}
+format-discharging-underline = ${colors.transparent}
+format-discharging-margin = ${globals.margin}
 
 format-full = <ramp-capacity> <label-full>
 format-full-prefix-foreground = ${colors.primary}
-format-full-underline = ${self.format-charging-underline}
+format-full-underline = ${colors.transparent}
+format-full-margin = ${globals.margin}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
-ramp-capacity-0-foreground = ${colors.accent4}
-ramp-capacity-1-foreground = ${colors.accent3}
-ramp-capacity-2-foreground = ${colors.accent2}
-ramp-capacity-3-foreground = ${colors.accent1}
-ramp-capacity-4-foreground = ${colors.primary}
-
-;animation-charging-0 = 
-;animation-charging-1 = 
-;animation-charging-2 = 
-;animation-charging-3 = 
-;animation-charging-4 = 
-;animation-charging-foreground = ${colors.primary}
-;animation-charging-framerate = 750
+ramp-capacity-0 = "       "
+ramp-capacity-1 = "       "
+ramp-capacity-2 = "       "
+ramp-capacity-3 = "       "
+ramp-capacity-4 = "       "
+ramp-capacity-5 = "       "
+ramp-capacity-0-background = ${colors.ramp0}
+ramp-capacity-1-background = ${colors.ramp1}
+ramp-capacity-2-background = ${colors.ramp2}
+ramp-capacity-3-background = ${colors.ramp3}
+ramp-capacity-4-background = ${colors.ramp4}
+ramp-capacity-5-background = ${colors.ramp5}
 
 [module/temperature]
 type = internal/temperature
