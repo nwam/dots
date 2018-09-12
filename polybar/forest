@@ -332,7 +332,7 @@ bar-volume-fill = ─
 bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.white}
+bar-volume-empty-foreground = ${colors.accent2}
 
 [module/battery]
 type = internal/battery

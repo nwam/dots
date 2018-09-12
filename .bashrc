@@ -49,8 +49,10 @@ fi
 # Add scripts to PATH
 export PATH="$HOME/scripts:$HOME/Documents/mkds:$PATH"
 
-# Custom prompt
-export PS1="\[\e[35m\]\u\[\e[m\]\[\e[1;30m\]@\[\e[m\]\[\e[92m\]\h\[\e[m\]\[\e[1;30m\]:\[\e[m\]\[\e[94m\]\W\[\e[m\]\[\e[36m\]\\$\[\e[m\] "
+# Load custom prompt
+export PROMPT_COMMAND="source $HOME/.ps1"
+source $HOME/.ps1
 
 # Point to directory containing themes for `themes` command
 export THEMES_DIR="/home/nwam/Projects/dots"
+

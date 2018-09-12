@@ -1,6 +1,7 @@
 import subprocess
 import os
 import re
+from .command_all_terminals import command_all_terminals
 
 SCHEME_NAME = 'default'
 PROP_RE = re.compile('^(.*)\.(.*?)\s*:')
@@ -10,11 +11,8 @@ ACCEPTED_PROP_RE = re.compile('foreground|background|cursorColor|color\d[0-5]?$'
 PROP_MAP = {'cursorColor' : 'cursor'}
 
 def update_terminal_colors(dynamic_colors_bin, scheme):
-    pts = os.listdir('/dev/pts/')
-    for pt in pts:
-         if pt.isdigit():
-             subprocess.call('echo "`{} switch {}`" > /dev/pts/{}'
-                        .format(dynamic_colors_bin, scheme, pt), shell=True)
+    cmd = '{} switch {}'.format(dynamic_colors_bin, scheme)
+    command_all_terminals(cmd)
 
 def generate_dynamic_color_scheme(xdefaults):
     scheme = ''

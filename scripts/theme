@@ -22,6 +22,7 @@ import logging
 import argparse
 import subprocess
 from util.urxvt_update import update_urxvt_colors
+from util.ps1_controller import update_ps1
 
 HOME = os.path.expanduser('~')
 CONFIG = os.path.join(HOME, '.config')
@@ -32,16 +33,19 @@ I3_CONFIG = os.path.join(CONFIG, 'i3/config')
 POLYBAR_CONFIG = os.path.join(CONFIG, 'polybar/config')
 XDEFAULTS_CONFIG = os.path.join(HOME, '.Xdefaults')
 VIS_CONFIG = os.path.join(CONFIG, 'vis/config')
+PS1_CONFIG = os.path.join(CONFIG, 'ps1_controller/config')
 
 I3_THEMES = os.path.join(DOTS, 'i3')
 POLYBAR_THEMES = os.path.join(DOTS, 'polybar')
 XDEFAULTS_THEMES = os.path.join(DOTS, 'Xdefaults')
 VIS_THEMES = os.path.join(DOTS, 'vis')
+PS1_THEMES = os.path.join(DOTS, 'ps1_controller')
 
 I3_TEMPLATE = os.path.join(I3_THEMES, TEMPLATE)
 POLYBAR_TEMPLATE = os.path.join(POLYBAR_THEMES, TEMPLATE)
 XDEFAULTS_TEMPLATE = os.path.join(XDEFAULTS_THEMES, TEMPLATE)
 VIS_TEMPLATE = os.path.join(VIS_THEMES, TEMPLATE)
+PS1_TEMPLATE = os.path.join(PS1_THEMES, TEMPLATE)
 
 def link(src, dst, name):
     if os.path.isfile(src):
@@ -97,6 +101,7 @@ if __name__ == '__main__':
     polybar = os.path.join(POLYBAR_THEMES, theme)
     xdefaults = os.path.join(XDEFAULTS_THEMES, theme)
     vis = os.path.join(VIS_THEMES, theme)
+    ps1 = os.path.join(PS1_THEMES, theme)
 
     install_templated_theme(i3, I3_TEMPLATE, I3_CONFIG, 'i3')
     install_templated_theme(
@@ -104,7 +109,9 @@ if __name__ == '__main__':
     install_templated_theme(
                 xdefaults, XDEFAULTS_TEMPLATE, XDEFAULTS_CONFIG, 'Xdefaults')
     install_templated_theme(vis, VIS_TEMPLATE, VIS_CONFIG, 'vis')
+    install_templated_theme(ps1, PS1_TEMPLATE, PS1_CONFIG, 'ps1_controller')
 
     update_urxvt_colors()
+    update_ps1()
 
     subprocess.run(['i3-msg', 'restart'])

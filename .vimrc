@@ -43,6 +43,7 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'leafgarland/typescript-vim'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()            " required Vundle
 filetype plugin indent on    " required Vundle

@@ -237,3 +237,5 @@ exec_always --no-startup-id ~/scripts/polybar_launch
 # kill any running processes
 exec_always --no-startup-id killall compton
 
+# update ps1
+exec_always --no-startup-id ps1_controller
