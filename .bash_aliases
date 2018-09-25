@@ -8,7 +8,8 @@ alias o='xdg-open 1>/dev/null 2>&1'
 alias l='ls'
 
 # aliases
-alias ff='firefoxlink'
+alias fft='firefoxtab'
+alias ffw='firefoxwindow'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
@@ -19,6 +20,7 @@ alias pip='pip3'
 
 # don't want to remember/type
 alias untargz='tar -zxvf'
+alias untar='tar -xvf'
 alias clip='xclip -selection c'
 alias bc='bc -l -q'
 

@@ -185,7 +185,7 @@ frame_color = "#3B7C87"
 foreground = "#3B7C87"
 background = "#191311"
 #background = "#2B313C"
-#timeout = 4
+timeout = 8
 timeout = infinity
 
 [urgency_normal]
@@ -193,7 +193,7 @@ frame_color = "#5B8234"
 foreground = "#5B8234"
 background = "#191311"
 #background = "#2B313C"
-#timeout = 6
+#timeout = 16
 timeout = infinity
 
 [urgency_critical]
