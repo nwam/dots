@@ -6,11 +6,11 @@ gaps inner 40
 
 # Colours
 # class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #285577 #ffffff #f2ae72   #f2ae72
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #08231d
-client.unfocused        #333333 #222222 #888888 #292d2e   #08231d
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+client.focused          #4c7899 #1e1e1e #ffffff #f2ae72   #f2ae72
+client.focused_inactive #333333 #1e1e1e #ffffff #484e50   #08231d
+client.unfocused        #333333 #1e1e1e #888888 #292d2e   #08231d
+client.urgent           #2f343a #1e1e1e #ffffff #900000   #900000
+client.placeholder      #000000 #1e1e1e #ffffff #000000   #0c0c0c
 
 # background
 exec_always --no-startup-id nitrogen --set-zoom-fill --no-recurse $HOME/Pictures/wallpaper/_0/cassie_bonn.jpg --head=0

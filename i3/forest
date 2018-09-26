@@ -13,9 +13,9 @@ client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 # background
-exec_always --no-startup-id nitrogen --set-zoom-fill --no-recurse $HOME/Pictures/wallpaper/2017_Germany/trees.png --head=0
-exec_always --no-startup-id nitrogen --set-zoom-fill --no-recurse $HOME/Pictures/wallpaper/2017_Germany/trees.png --head=1
-exec_always --no-startup-id nitrogen --set-zoom-fill --no-recurse $HOME/Pictures/wallpaper/2017_Germany/trees.png --head=2
+exec_always --no-startup-id nitrogen --set-zoom-fill --no-recurse $HOME/Pictures/wallpaper/trees.png --head=0
+exec_always --no-startup-id nitrogen --set-zoom-fill --no-recurse $HOME/Pictures/wallpaper/trees.png --head=1
+exec_always --no-startup-id nitrogen --set-zoom-fill --no-recurse $HOME/Pictures/wallpaper/trees.png --head=2
 
 # compositor
 exec_always --no-startup-id compton
