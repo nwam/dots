@@ -1,0 +1,22 @@
+# pixel border size
+for_window [class="^.*"] border pixel 3
+
+# gaps
+gaps inner 40
+
+# Colours
+# class                 border  backgr. text    indicator child_border
+client.focused          #4285F4 #000000 #ffffff #1967D2   #4285F4
+client.focused_inactive #5F6368 #000000 #ffffff #5F6368   #5F6368
+client.unfocused        #9AA0A6 #000000 #ffffff #9AA0A6   #9AA0A6
+client.urgent           #EA4335 #900000 #ffffff #EA4335   #EA4335
+client.placeholder      #000000 #000000 #ffffff #000000   #000000
+
+# background
+exec_always --no-startup-id nitrogen --set-zoom-fill --no-recurse $HOME/Pictures/wallpaper/trees.png --head=0
+exec_always --no-startup-id nitrogen --set-zoom-fill --no-recurse $HOME/Pictures/wallpaper/trees.png --head=1
+exec_always --no-startup-id nitrogen --set-zoom-fill --no-recurse $HOME/Pictures/wallpaper/trees.png --head=2
+
+# compositor
+exec_always --no-startup-id compton
+
