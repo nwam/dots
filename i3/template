@@ -34,8 +34,9 @@ bindsym $mod+Return exec urxvt #i3-sensible-terminal
 bindsym $mod+i exec env GTK_THEME=Adwaita:light firefox
 bindsym $mod+b exec thunar
 
-# diable ctrl-q for firefox
+# script bindings
 bindsym Ctrl+q exec $HOME/scripts/noctrlqff
+bindsym $mod+Shift+slash exec $HOME/scripts/i3_display_swap
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -147,8 +148,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # lock
-bindsym $mod+Shift+u exec $HOME/scripts/lock
-bindsym $mod+Shift+s exec gksu pm-suspend
+bindsym $mod+Shift+s exec sudo pm-suspend | $HOME/scripts/lock
 
 # screenshot
 bindsym --release Print exec xfce4-screenshooter -r

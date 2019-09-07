@@ -9,25 +9,25 @@
 ;=====================================================
 
 [colors]
-black = #000
+black = #222
 white = #FFF
-background = #000
+background = #222
 foreground = #000
 
 background-alt = #444
 foreground-alt = #555
 
-yellow = #ffff0e
-green = #16ff16
-blue = #1010ff
-magenta = #ff07ff
-red = #ff1010
-orange = #ffb600
-cyan = #0cf1f2
+yellow = #efbe00
+green = #00bf8c
+blue = #5fbfce
+magenta = #5c798b
+red = #b33d41
+orange = #e29851
+cyan = #007354
 
 primary = ${self.yellow}
 secondary = ${self.cyan}
-accent1 = ${self.green}
+accent1 = ${self.cyan}
 accent2 = ${self.blue}
 accent3 = ${self.magenta}
 accent4 = ${self.red}
@@ -80,7 +80,7 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = 8_bit_1_6:style=Regular:pixelsize=10;3
+font-0 = DejaVu Sans Mono:style=Regular:pixelsize=10;3:antialias=false
 font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=10;3"
 font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=10;3"
 font-3 = "Font Awesome 5 Brands:pixelsize=10;3"
@@ -305,7 +305,7 @@ time-alt = "%H:%M:%S"
 ;format-prefix = 
 format-foreground = ${colors.black}
 ;format-underline = ${colors.primary}
-format-background = ${colors.red}
+format-background = ${colors.orange}
 format-margin = 2
 
 label = %date% %time%

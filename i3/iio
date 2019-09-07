@@ -1,0 +1,22 @@
+# pixel border size
+for_window [class="^.*"] border pixel 2
+
+# gaps
+gaps inner 45
+
+# Colours
+# class                 border  backgr. text    indicator child_border
+client.focused          #efbe00 #101010 #ffffff #FFFFFF   #efbe00
+client.focused_inactive #00bf8c #101010 #ffffff #000000   #00bf8c
+client.unfocused        #00bf8c #101010 #ffffff #484e50   #00bf8c
+client.urgent           #FF1010 #101010 #ffffff #900000   #FF1010
+client.placeholder      #000000 #101010 #ffffff #000000   #000000
+
+# background
+exec_always --no-startup-id nitrogen --set-zoom-fill --no-recurse $HOME/Pictures/wallpaper/iio.png --head=0
+exec_always --no-startup-id nitrogen --set-zoom-fill --no-recurse $HOME/Pictures/wallpaper/iio.png --head=1
+exec_always --no-startup-id nitrogen --set-zoom-fill --no-recurse $HOME/Pictures/wallpaper/iio.png --head=2
+
+# compositor
+exec_always --no-startup-id compton
+

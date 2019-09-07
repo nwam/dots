@@ -9,6 +9,11 @@ THIS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 echo "export THEMES_DIR=$THIS_DIR" >> $HOME/.bashrc
 sudo ln util/_theme_completion /etc/bash_completion.d/theme
 
+# Install fonts
+mkdir -p $HOME/.fonts
+mv fonts/* $HOME/.fonts
+fc-cache -f
+
 # Install dunst config
 sudo mkdir /etc/dunst
 sudo ln $HOME/dunst/dunstrc /etc/dunst

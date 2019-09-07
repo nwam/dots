@@ -22,6 +22,8 @@ This dependency list may not be full.
  - [compton](https://github.com/chjj/compton)
  - [dunst](https://github.com/dunst-project/dunst) (optional)
  - [dynamic-colors](https://github.com/sos4nt/dynamic-colors)
+ - [font-awesome](https://github.com/FortAwesome/Font-Awesome#using-font-awesome-on-the-desktop) (optional)
+ - [MaterialDesignIcons](https://material.io/tools/icons/?style=baseline) (optional)
 
 ### Manual Install
 For manual install, see the `./install_core` file and run commands of parts which you wish to install.
