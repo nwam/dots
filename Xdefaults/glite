@@ -1,0 +1,43 @@
+! -- Fonts -- !
+URxvt.font:xft:Monospace:size=10
+URxvt.boldfont:xft:Monospace-Bold:size=10
+
+! -- Other things -- !
+URxvt.scrollBar: false
+
+! special
+*.foreground:   #202020
+*.background:   #f5f5f5
+*.cursorColor:  #202020
+
+! black
+*.color0:       #cccccc
+*.color8:       #aaaaaa
+
+! red
+*.color1:       #db4437
+*.color9:       #b31412
+
+! green
+*.color2:       #0f9d58
+*.color10:      #137333
+
+! yellow
+*.color3:       #f4b400
+*.color11:      #ea8600
+
+! blue
+*.color4:       #4285f4
+*.color12:      #185abc
+
+! magenta
+*.color5:       #a55abf
+*.color13:      #7b3690
+
+! cyan
+*.color6:       #65dfd0
+*.color14:      #2fbaa7
+
+! white
+*.color7:       #656565
+*.color15:      #404040

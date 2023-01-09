@@ -1,0 +1,43 @@
+! -- Fonts -- !
+URxvt.font:xft:DejaVu Sans Mono:style=Book:size=10
+URxvt.boldfont:xft:DejaVu Sans Mono:style=Bold:size=10
+
+! -- Other things -- !
+URxvt.scrollBar: false
+
+! special
+*.foreground:   #1d1f21
+*.background:   #f5f8f6
+*.cursorColor:  #1d1f21
+
+! black
+*.color0:       #282a2e
+*.color8:       #373b41
+
+! red
+*.color1:       #802832
+*.color9:       #b33d41
+
+! green
+*.color2:       #008044
+*.color10:      #00bf65
+
+! yellow
+*.color3:       #ffcc00
+*.color11:      #fad978
+
+! blue
+*.color4:       #5fbfce
+*.color12:      #91e5f2
+
+! magenta
+*.color5:       #e29851
+*.color13:      #e9b380
+
+! cyan
+*.color6:       #00bf8c
+*.color14:      #00f2b1
+
+! white
+*.color7:       #707880
+*.color15:      #c5c8c6

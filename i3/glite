@@ -2,7 +2,7 @@
 for_window [class="^.*"] border pixel 3
 
 # gaps
-gaps inner 40
+#gaps inner 40
 
 # Colours
 # class                 border  backgr. text    indicator child_border

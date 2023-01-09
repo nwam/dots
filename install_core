@@ -14,9 +14,12 @@ mkdir -p $HOME/.fonts
 mv fonts/* $HOME/.fonts
 fc-cache -f
 
+# Make dirs
+mkdir -p $HOME/.config/ps1_controller
+
 # Install dunst config
-sudo mkdir /etc/dunst
-sudo ln $HOME/dunst/dunstrc /etc/dunst
+#sudo mkdir /etc/dunst
+#sudo ln $HOME/dunst/dunstrc /etc/dunst
 
 # Reload
 . $HOME/.bashrc

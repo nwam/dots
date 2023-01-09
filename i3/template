@@ -31,7 +31,7 @@ floating_modifier $mod
 
 # programs
 bindsym $mod+Return exec urxvt #i3-sensible-terminal
-bindsym $mod+i exec env GTK_THEME=Adwaita:light firefox
+bindsym $mod+i exec google-chrome-stable
 bindsym $mod+b exec thunar
 
 # script bindings
@@ -142,8 +142,8 @@ bindsym XF86MonBrightnessDown exec light -U 20 # decrease screen brightness
 bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 
 # Media player controls
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
