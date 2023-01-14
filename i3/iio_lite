@@ -14,7 +14,7 @@ client.placeholder      #000000 #eeeeee #101010 #000000   #000000
 
 # background
 exec_always --no-startup-id nitrogen --set-zoom-fill --no-recurse $HOME/Pictures/wallpaper/iio.png --head=0
-exec_always --no-startup-id nitrogen --set-zoom-fill --no-recurse $HOME/Pictures/wallpaper/iio.png --head=1
+exec_always --no-startup-id nitrogen --set-zoom-fill --no-recurse $HOME/Pictures/wallpaper/iio_top.png --head=1
 exec_always --no-startup-id nitrogen --set-zoom-fill --no-recurse $HOME/Pictures/wallpaper/iio.png --head=2
 
 # compositor

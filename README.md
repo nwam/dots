@@ -22,6 +22,9 @@ This dependency list may not be full.
  - [compton](https://github.com/chjj/compton)
  - [dunst](https://github.com/dunst-project/dunst) (optional)
  - [dynamic-colors](https://github.com/sos4nt/dynamic-colors)
+ - [nitrogen](https://wiki.archlinux.org/title/nitrogen)
+ - [thunar](https://docs.xfce.org/xfce/thunar/start)
+ - [playerctl](https://github.com/altdesktop/playerctl)
  - [font-awesome](https://github.com/FortAwesome/Font-Awesome#using-font-awesome-on-the-desktop) (optional)
  - [MaterialDesignIcons](https://material.io/tools/icons/?style=baseline) (optional)
 

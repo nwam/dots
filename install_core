@@ -16,6 +16,7 @@ fc-cache -f
 
 # Make dirs
 mkdir -p $HOME/.config/ps1_controller
+mkdir -p $HOME/.config/polybar
 
 # Install dunst config
 #sudo mkdir /etc/dunst
